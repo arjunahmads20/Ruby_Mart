@@ -1,8 +1,0 @@
-Ruby Mart Account:
-Username: admin1
-Password: admin1123
-
-Database Utility:
-Database name: ruby_mart
-User: root
-Password: pohonubi926

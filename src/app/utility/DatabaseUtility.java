@@ -13,7 +13,7 @@ public class DatabaseUtility {
                 String dbName = "ruby_mart";
                 String url = "jdbc:mysql://localhost:3306/" + dbName;
                 String user = "root";
-                String password = "pohonubi926";
+                String password = "";
                 connection = DriverManager.getConnection(url, user, password);
             }
         } catch (SQLException e) {

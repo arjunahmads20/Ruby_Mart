@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.fxml.OrderPaymentDetailController">
+   <children>
+      <VBox layoutX="0.0" layoutY="0.0" prefHeight="642.0" prefWidth="967.0">
+         <children>
+            <!-- HEADER START -->
+            <HBox prefHeight="29.0" prefWidth="967.0">
+               <children>
+                  <Button fx:id="btnGoBack" mnemonicParsing="false" onAction="#handleGoBack" text="Go Back">
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label prefHeight="25.0" prefWidth="121.0" text="Order Payment Detail" />
+               </children>
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="960.0">
+               <children>
+                  <Label fx:id="lblMessage" prefHeight="17.0" prefWidth="360.0" />
+               </children>
+            </HBox>
+            <!-- HEADER END -->
+            <HBox prefHeight="373.0" prefWidth="967.0" spacing="24.0">
+               <children>
+                  <VBox layoutX="34.0" layoutY="34.0" prefHeight="373.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Id Payment" />
+                              <Label fx:id="lblIdPayment" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Id Order" />
+                              <Label fx:id="lblIdOrder" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="210.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Order Cost" />
+                              <Label layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="20.0" text="Rp" />
+                              <Label fx:id="lblOrderCost" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="210.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Admin Cost" />
+                              <Label layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="20.0" text="Rp" />
+                              <Label fx:id="lblAdminCost" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                        
+                        <HBox layoutX="10.0" layoutY="210.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Total Pay Cost" />
+                              <Label layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="20.0" text="Rp" />
+                              <Label fx:id="lblTotalPayCost" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Payment Method" />
+                              <Label fx:id="lblPaymentMethod" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Datetime Created" />
+                              <Label fx:id="lblDatetimeCreated" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Datetime Finished" />
+                              <Label fx:id="lblDatetimeFinished" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+
+                        <Button fx:id="btnPrintOrderEvidence" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Print" />
+                        
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="373.0" prefWidth="469.0" />
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="98.0" prefWidth="967.0">
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

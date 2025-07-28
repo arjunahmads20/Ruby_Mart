@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="-4.0" layoutY="-4.0" prefHeight="642.0" prefWidth="967.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="967.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Go Back">
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label prefHeight="25.0" prefWidth="121.0" text="Add Item" />
+               </children>
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="373.0" prefWidth="967.0" spacing="24.0">
+               <children>
+                  <VBox prefHeight="373.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox layoutX="10.0" layoutY="168.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Image URL" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Name" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+                           <children>
+                              <VBox prefHeight="46.0" prefWidth="120.0" spacing="4.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="491.0" text="Size" />
+                                    <TextField prefHeight="25.0" prefWidth="120.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="46.0" prefWidth="120.0" spacing="4.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="491.0" text="Unit" />
+                                    <ChoiceBox prefHeight="25.0" prefWidth="120.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="10.0" layoutY="330.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Category" />
+                              <ChoiceBox prefHeight="25.0" prefWidth="91.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="172.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Description" />
+                              <TextArea prefHeight="73.0" prefWidth="290.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="34.0" layoutY="34.0" prefHeight="373.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <VBox fillWidth="false" prefHeight="46.0" prefWidth="120.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Stock" />
+                              <TextField prefHeight="25.0" prefWidth="120.0" />
+                           </children>
+                        </VBox>
+                        <VBox fillWidth="false" layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="120.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Sell Price (Rp)" />
+                              <TextField prefWidth="120.0" />
+                           </children>
+                        </VBox>
+                        <VBox fillWidth="false" layoutX="10.0" layoutY="64.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Buy Price (Rp)" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                              <TextField prefWidth="120.0" />
+                           </children>
+                        </VBox>
+                        <VBox fillWidth="false" layoutX="10.0" layoutY="118.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="491.0" text="Date Added" />
+                              <TextField editable="false" prefWidth="120.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="373.0" prefWidth="469.0" />
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="98.0" prefWidth="967.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Clear All">
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="34.0" layoutY="22.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Save" />
+               </children>
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

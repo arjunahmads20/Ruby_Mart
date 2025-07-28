@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.fxml.ItemStatisticController">
+   <children>
+      <VBox layoutX="0.0" layoutY="0.0" prefHeight="642.0" prefWidth="967.0">
+         <children>
+            <!-- HEADER START -->
+            <HBox prefHeight="29.0" prefWidth="967.0">
+               <children>
+                  <Button fx:id="btnGoBack" mnemonicParsing="false" onAction="#handleGoBack" text="Go Back">
+                     <HBox.margin>
+                        <Insets right="24.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label prefHeight="25.0" prefWidth="121.0" text="Item Statistic" />
+               </children>
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="960.0">
+               <children>
+                  <Label fx:id="lblMessage" prefHeight="17.0" prefWidth="360.0" />
+               </children>
+            </HBox>
+            <VBox prefHeight="51.0" prefWidth="967.0">
+               <children>
+                  <HBox prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="170.0" text="Id" />
+                        <Label fx:id="lblItemIdItem" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="170.0" text="Name" />
+                        <Label fx:id="lblItemName" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </VBox>
+            <HBox prefHeight="233.0" prefWidth="967.0" spacing="24.0">
+               <children>
+                  <VBox prefHeight="373.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="168.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <LineChart fx:id="lctItemStatisticQuantitySoldChart">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Quantity Sold" />
+                              <Label fx:id="lblItemQuantitySold" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="34.0" layoutY="34.0" prefHeight="373.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="168.0" prefHeight="35.0" prefWidth="459.0" spacing="4.0">
+                           <children>
+                              <LineChart fx:id="lctItemStatisticTotalProfitChart">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Total Profit" />
+                              <Label layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="20.0" text="Rp" />
+                              <Label fx:id="lblItemTotalProfit" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="325.0" prefWidth="214.0">
+                     <children>
+                        <ChoiceBox fx:id="cbxStore" prefHeight="25.0" prefWidth="120.0" />
+                        <ChoiceBox fx:id="cbxTimeInterval" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" />
+                     </children></VBox>
+               </children>
+               <padding>
+                  <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="264.0" prefWidth="967.0">
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="202.0" prefWidth="469.0" spacing="8.0">
+                     <children>
+                        <HBox layoutX="10.0" layoutY="233.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="170.0" text="Ranking #" />
+                              <Label fx:id="lblItemRanking" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="89.0" text="0" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnDownloadAsXlsxFile" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Download as .xlsx file" />
+                        <Button fx:id="btnGetAiRecommendation" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="AI Recommendation" />
+                        <Label prefHeight="17.0" prefWidth="157.0" text="AI Recommendation:" />
+                        <TextArea fx:id="txfAiRecommendation" prefHeight="78.0" prefWidth="469.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

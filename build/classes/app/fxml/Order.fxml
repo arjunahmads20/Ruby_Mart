@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.fxml.OrderController">
+   <children>
+      <VBox prefHeight="640.0" prefWidth="1013.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="905.0"> 
+               <children>
+                  <HBox prefHeight="64.0" prefWidth="217.0" spacing="12.0">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="159.0" spacing="6.0">
+                           <children>
+                              <Label fx:id="lblStoreName" prefHeight="17.0" prefWidth="159.0" text="Ruby Mart" />
+                              <Label fx:id="lblStoreAddress" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="159.0" text="Jl. ABC No. 11" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="217.0" spacing="12.0">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="159.0" spacing="6.0">
+                           <children>
+                              <Label fx:id="lblUserUsername" prefHeight="17.0" prefWidth="159.0" text="Cashier 1" />
+                              <Label fx:id="lblUserRole" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="159.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="364.0" prefWidth="1013.0">
+               <children>
+                  <VBox prefHeight="364.0" prefWidth="524.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="506.0">
+                           <children>
+                              <Label text="Order List" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="12.0" prefWidth="506.0">
+                           <children>
+                              <TextField fx:id="txfSearchOrderBar" prefHeight="25.0" prefWidth="432.0" promptText="Search order by id" />
+                              <Button fx:id="btnSearchOrder" mnemonicParsing="false" text="Search" />
+                           </children>
+                        </HBox>
+                        <ScrollPane prefHeight="311.0" prefWidth="506.0">
+                           <content>
+                              <VBox fx:id="vbxOrderList" prefHeight="264.0" prefWidth="503.0">
+                                 <children>
+                                    <HBox prefHeight="24.0" prefWidth="491.0">
+                                       <children>
+                                          <Label prefHeight="38.0" prefWidth="34.0" text="Id" />
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="159.0" text="Datetime Created" />
+                                          <Label layoutX="44.0" layoutY="10.0" prefHeight="24.0" prefWidth="159.0" text="Datetime Finished" />
+                                          <Label layoutX="203.0" layoutY="10.0" prefHeight="24.0" prefWidth="90.0" text="Status" />
+                                          <Label layoutX="44.0" layoutY="10.0" prefHeight="24.0" prefWidth="106.0" text="Total Pay Cost" />
+                                       </children>
+                                    </HBox>
+                                    
+                                    
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="btnAddOrder" mnemonicParsing="false" prefHeight="25.0" prefWidth="645.0" text="Add Order" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="403.0" prefWidth="55.0" />
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="364.0" prefWidth="524.0">
+                     <children>
+                        <HBox prefHeight="9.0" prefWidth="494.0">
+                           <children>
+                              <Button fx:id="btnEditSelectedOrder" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Edit" />
+                              <Button fx:id="btnSaveSelectedOrder" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Save" visible="false" />
+                              <Button fx:id="btnDeleteSelectedOrder" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Delete" visible="false" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="201.0" prefWidth="507.0">
+                           <children>
+                              <VBox prefHeight="201.0" prefWidth="325.0">
+                                 <children>
+                                    <HBox layoutX="10.0" layoutY="222.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Id" />
+                                          <Label fx:id="lblSelectedOrderIdOrder" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Datetime Created" />
+                                          <Label fx:id="lblSelectedOrderDatetimeCreated" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="142.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Datetime Finished" />
+                                          <Label fx:id="lblSelectedOrderDatetimeFinished" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="143.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Status" />
+                                          <Label fx:id="lblSelectedOrderStatus" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="27.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Total Item Class Quantity" />
+                                          <Label fx:id="lblSelectedOrderTotalItemClassQuantity" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="44.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Total Item Quantity" />
+                                          <Label fx:id="lblSelectedOrderTotalItemQuantity" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="61.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Total Item Cost" />
+                                          <Label prefHeight="17.0" prefWidth="19.0" text="Rp" />
+                                          <Label fx:id="lblSelectedOrderTotalItemCost" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="78.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Payment Method" />
+                                          <Label fx:id="lblSelectedOrderPaymentMethod" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="95.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Nominal Order Discount" />
+                                          <Label prefHeight="17.0" prefWidth="19.0" text="Rp" />
+                                          <Label fx:id="lblSelectedOrderNominalDiscount" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="112.0" prefHeight="4.0" prefWidth="290.0" spacing="8.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="170.0" text="Total Pay Cost" />
+                                          <Label prefHeight="17.0" prefWidth="19.0" text="Rp" />
+                                          <Label fx:id="lblSelectedOrderTotalPayCost" layoutX="188.0" layoutY="10.0" prefHeight="17.0" prefWidth="46.0" text="0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="201.0" prefWidth="155.0" />
+                           </children>
+                        </HBox>
+                        <VBox layoutX="10.0" layoutY="309.0" prefHeight="20.0" prefWidth="494.0" spacing="4.0">
+                           <children>
+                              <Button fx:id="btnSelectedOrderPaymentDetail" mnemonicParsing="false" text="Payment Detail" />
+                           </children>
+                        </VBox>
+                        <Separator prefHeight="31.0" prefWidth="494.0" />
+                        <Button fx:id="btnOrderStatistic" mnemonicParsing="false" prefHeight="25.0" prefWidth="543.0" text="Order Sstatistic" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="btnItemList" mnemonicParsing="false" prefHeight="25.0" prefWidth="1061.0" text="Item List" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="acpOrderCart" layoutY="306.0" prefHeight="345.0" prefWidth="1013.0" style="-fx-background-color: yellow;" translateY="320.0">
+         <children>
+            <VBox prefHeight="345.0" prefWidth="1013.0">
+               <children>
+                  <Button fx:id="btnToggleOrderCart" mnemonicParsing="false" prefHeight="25.0" prefWidth="1040.0" text="Hide" />
+                  <HBox prefHeight="12.0" prefWidth="1013.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="137.0" text="Item In Order" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="132.0" />
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="126.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="327.0" prefWidth="1013.0">
+                     <content>
+                        <VBox fx:id="vbxItemInOrderList" prefHeight="220.0" prefWidth="1013.0">
+                           <children>
+                              <HBox prefHeight="24.0" prefWidth="1010.0">
+                                 <children>
+                                    <Label prefHeight="38.0" prefWidth="34.0" text="Id" />
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="159.0" text="Name" />
+                                    <Label layoutX="154.0" layoutY="10.0" prefHeight="24.0" prefWidth="55.0" text="Size" />
+                                    <Label layoutX="44.0" layoutY="10.0" prefHeight="24.0" prefWidth="59.0" text="Unit" />
+                                    <Label layoutX="225.0" layoutY="10.0" prefHeight="24.0" prefWidth="132.0" text="Category" />
+                                    <Label layoutX="317.0" layoutY="10.0" prefHeight="24.0" prefWidth="107.0" text="Price (Rp)" />
+                                    <Label layoutX="449.0" layoutY="10.0" prefHeight="24.0" prefWidth="107.0" text="Discount (Rp)" />
+                                    <Label layoutX="556.0" layoutY="10.0" prefHeight="24.0" prefWidth="170.0" text="Quantity" />
+                                    <Label layoutX="663.0" layoutY="10.0" prefHeight="24.0" prefWidth="119.0" text="Total Cost (Rp)" />
+                                 </children>
+                              </HBox>
+                              
+                           </children>
+                        </VBox>
+                     </content></ScrollPane>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Total Item Cost" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Rp" />
+                                    <Label fx:id="lblSelectedOrderTotalItemCostInCart" layoutX="10.0" layoutY="10.0" text="0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="176.0" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

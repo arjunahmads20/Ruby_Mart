@@ -1,0 +1,10 @@
+Naming Convention:
+• Java
+• Package: lower case
+• Class: pascal case
+• Variable: camel case
+• Method/Function: camel case
+• Constant: upper snake case
+• MySQL
+• Table : snake case
+• attribute : snake case

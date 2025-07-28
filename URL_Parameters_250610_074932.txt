@@ -1,0 +1,1 @@
+{\"model\":\"deepseek/deepseek-chat:free\",\"messages\":[{\"role\": \"user\",\"content\":\"this is the data from item give analysis base on the data base on the date and important days\"}]}
